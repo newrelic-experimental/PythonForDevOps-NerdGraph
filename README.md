@@ -2,6 +2,13 @@
 
 # Python for DevOps - How to automate top 5 common operations with New Relic NerdGraph
 
+As you instrument more apps and hosts with New Relic One, you may want to automate tasks such as auditing your instrumented services and exporting telemetry data. These tasks can be performed via the prebuilt UI or can be automated through NerdGraph, our GraphQL API. In this sample code, you’ll how to use can use API calls in Python to automate the following operations:
+
+- Audit your instrumented services.
+- Manage your tags.
+- Export telemetry for data analysis.
+- Export dashboards as files.
+- Rotate your license keys.
 
 ## What do you need to make this work?
 
