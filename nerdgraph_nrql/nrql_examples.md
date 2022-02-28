@@ -30,8 +30,6 @@ Returns the 95th percentile response time since 30 days ago, group by - daily
 
 > SELECT percentile(duration, 95) FROM Transaction WHERE appName = 'XXX' AND httpResponseCode = 'XXX' SINCE 30 days ago limit MAX FACET dateOf(timestamp) 
 
----
-
 ## The Four Golden Signals - Traffic
 
 Return the rate of change (1min) since 7 days ago, group by - hourly
@@ -42,8 +40,6 @@ Return the rate of change (1hr) since 30 days ago, group by - daily
 
 > SELECT rate(count(*), 1 hour) FROM Transaction WHERE appName = 'XXX' SINCE 30 days ago limit MAX FACET dateOf(timestamp)
 
----
-
 ## The Four Golden Signals - Errors 
 
 Return the percentage of errors for status code 2XX since 7 days ago, group by - hourly
@@ -53,8 +49,6 @@ Return the percentage of errors for status code 2XX since 7 days ago, group by -
 Return the percentage of errors for status code outside 2XX since 30 days ago, group by - daily
 
 > SELECT percentage(count(*), WHERE httpResponseCode NOT LIKE '2%') FROM Transaction WHERE appName = 'XXX' SINCE 30 days ago limit MAX FACET dateOf(timestamp)
-
----
 
 ## The Four Golden Signals - Saturation 
 
